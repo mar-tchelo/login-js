@@ -1,0 +1,120 @@
+:root{
+    --input-linear:linear-gradient(120deg, #E75590, #00C2CB);
+    --button-linear:linear-gradient(120deg, #E75590, #00C2CB, #E75590);
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.login{
+    height: 100vh;
+    background: var(--input-linear);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    min-height: 400px;
+    width: 300px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius:8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    -webkit-box-shadow: 1px 9px 15px -2px #000000; 
+    box-shadow: 1px 9px 15px -2px #000000;
+}
+
+.login-title{
+    margin-bottom: 32px;
+    color: #303030;
+    
+    letter-spacing: 1px;
+}
+
+.login-form{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-input{
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: unset;
+    outline: none;
+}
+
+.login-input-border{
+    height: 1px;
+    width: 100%;
+    margin-bottom:16px;
+    background: #cfcfcf;
+    transition: .3s ease-in-out;
+}
+
+.login-input-border:after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: var(--input-linear);
+    transition: .3s ease-in-out;
+}
+
+.login-input:focus + .login-input-border::after{
+    width: 100%;
+}
+
+.login-submit{
+    height: 48px;
+    width: 100%;
+    outline: none;
+    background: var(--button-linear);
+    background-size: 200%;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    letter-spacing: 1px;
+
+    -webkit-box-shadow: 1px 1px 10px -2px #000000; 
+    box-shadow: 1px 1px 10px -2px #000000;
+}
+
+.login-submit:hover{
+    background-position: right;
+    letter-spacing: 0px;
+}
+
+.login-reset{
+    font-size: 12px;
+    color: #929292;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: .2s ease-in;
+}
+
+.login-reset:hover{
+    color: blue;
+    opacity: 0.59;
+    font-weight: bold;
+    
+}
